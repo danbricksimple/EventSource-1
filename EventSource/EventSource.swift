@@ -14,7 +14,7 @@ enum EventSourceState {
     case Closed
 }
 
-public class EventSource: NSObject, NSURLSessionDataDelegate {
+@objc public class EventSource: NSObject, NSURLSessionDataDelegate {
 
     let url: NSURL
     private let lastEventIDKey = "com.inaka.eventSource.lastEventId"

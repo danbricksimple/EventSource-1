@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0056F27A1BF68A30009BE8EA /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0056F2791BF68A30009BE8EA /* ObjCViewController.m */; };
 		41DFE42A1A8E686F000C3519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFE4291A8E686F000C3519 /* AppDelegate.swift */; };
 		41DFE42C1A8E686F000C3519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DFE42B1A8E686F000C3519 /* ViewController.swift */; };
 		41DFE42F1A8E686F000C3519 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41DFE42D1A8E686F000C3519 /* Main.storyboard */; };
@@ -28,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0056F2771BF68A2F009BE8EA /* EventSource-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventSource-Bridging-Header.h"; sourceTree = "<group>"; };
+		0056F2781BF68A30009BE8EA /* ObjCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
+		0056F2791BF68A30009BE8EA /* ObjCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		41DFE4241A8E686F000C3519 /* EventSource.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventSource.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DFE4281A8E686F000C3519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41DFE4291A8E686F000C3519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,9 @@
 				41DFE4301A8E686F000C3519 /* Images.xcassets */,
 				41DFE4321A8E686F000C3519 /* LaunchScreen.xib */,
 				41DFE4271A8E686F000C3519 /* Supporting Files */,
+				0056F2781BF68A30009BE8EA /* ObjCViewController.h */,
+				0056F2791BF68A30009BE8EA /* ObjCViewController.m */,
+				0056F2771BF68A2F009BE8EA /* EventSource-Bridging-Header.h */,
 			);
 			path = EventSourceExample;
 			sourceTree = "<group>";
@@ -169,7 +176,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Inaka;
 				TargetAttributes = {
@@ -226,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0056F27A1BF68A30009BE8EA /* ObjCViewController.m in Sources */,
 				41DFE44B1A8E6D6F000C3519 /* EventSource.swift in Sources */,
 				41DFE42C1A8E686F000C3519 /* ViewController.swift in Sources */,
 				41DFE42A1A8E686F000C3519 /* AppDelegate.swift in Sources */,
@@ -353,10 +361,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EventSourceExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.inaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EventSourceExample/EventSource-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -364,10 +375,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/EventSourceExample/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.inaka.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EventSourceExample/EventSource-Bridging-Header.h";
 			};
 			name = Release;
 		};
